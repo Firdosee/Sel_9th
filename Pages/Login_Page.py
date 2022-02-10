@@ -4,7 +4,7 @@ import unittest
 from selenium.webdriver.common.by import By
 from Config.config import Test_Data
 from Pages.Base_Page import Base_Page
-from Testscripts.test_Base import test_Base
+from Testscripts.test_Base import abc_test_Base
 
 
 class Login_Page(Base_Page):
@@ -21,7 +21,7 @@ class Login_Page(Base_Page):
         super().__init__(driver)
 
     def base_login_to_application(self):
-        log = test_Base.getLogger()
+        log = abc_test_Base.getLogger()
         dict_d = {}
         log.info("Getting Test Data")
         dict_d = Test_Data.getTestData(self, "test_Login")

@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from Config.config import Test_Data
 from Pages.Base_Page import Base_Page
-from Testscripts.test_Base import test_Base
+from Testscripts.test_Base import abc_test_Base
 
 
 class Logout_Page(Base_Page):
@@ -14,7 +14,7 @@ class Logout_Page(Base_Page):
     LOGIN = (By.XPATH, "//a[text()='Login']")
 
     def logout_operation(self):
-        log = test_Base.getLogger()
+        log = abc_test_Base.getLogger()
         log.info("Navigating to the logout section")
         self.Hover_operation(self.logout_testuser)
         self.click_operation(self.LOGOUT)

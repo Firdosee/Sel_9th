@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from Pages.Base_Page import Base_Page
-from Testscripts.test_Base import test_Base
+from Testscripts.test_Base import abc_test_Base
 
 
 class WishList_Page(Base_Page):
@@ -12,7 +12,7 @@ class WishList_Page(Base_Page):
     wishlist = (By.XPATH, "//*[text()='Wishlist']")
 
     def go_to_wishlist(self):
-        log = test_Base.getLogger()
+        log = abc_test_Base.getLogger()
         log.info("Navigating to Wishlist")
         self.Hover_operation(self.user_test)
         self.click_operation(self.wishlist)

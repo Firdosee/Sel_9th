@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from Pages.Base_Page import Base_Page
-from Testscripts.test_Base import test_Base
+from Testscripts.test_Base import abc_test_Base
 
 
 class Profile_Page(Base_Page):
@@ -28,7 +28,7 @@ class Profile_Page(Base_Page):
     Assertion_Element = (By.XPATH, "//*[@class='dpjmKp']")
 
     def navigate_to_address(self):
-        log = test_Base.getLogger()
+        log = abc_test_Base.getLogger()
         log.info("Navigating to my profile section")
         self.Hover_operation(self.ter_test)
         self.click_operation(self.Profile)

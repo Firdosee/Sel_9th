@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from Config.config import Test_Data
 from Pages.Base_Page import Base_Page
-from Testscripts.test_Base import test_Base
+from Testscripts.test_Base import abc_test_Base
 
 
 class Home_Page(Base_Page):
